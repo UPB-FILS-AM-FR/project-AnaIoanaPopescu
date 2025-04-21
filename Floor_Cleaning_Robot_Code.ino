@@ -1,4 +1,5 @@
 #include <NewPing.h>    //import libraries
+#include <LiquidCrystal.h>
 
 const int echo_L = 2;   //initialize pin numbers                              
 const int trig_L = 3;
@@ -22,7 +23,7 @@ char incomingByte;
 NewPing sonar_L(trig_L, echo_L, max_distance);    //initialize all the 3 sensors
 NewPing sonar_M(trig_M, echo_M, max_distance);
 NewPing sonar_R(trig_R, echo_R, max_distance);
-//LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);    //initialize LCD
+LiquidCrystal lcd(A0, A1, A2, A3, A4, A5);    //initialize LCD
 
 void setup()
 {  
@@ -37,8 +38,8 @@ void setup()
   digitalWrite(R1, LOW);
   digitalWrite(R2, LOW);
   digitalWrite(pump, LOW);
-  //lcd.begin(16, 2);
-  //lcd.print("Welcome!");
+  lcd.begin(16, 2);
+  lcd.print("Welcome!");
   Serial.begin(9600);   //begin serial communication via bluetooth at 9600 baud rate
   delay(2000);
 }
@@ -48,8 +49,8 @@ void loop()
 {
   if(digitalRead(button) == LOW)    //if button is not pressed
   {
-    //lcd.clear();                    //manual mode
-    Serial.println("Manual Mode"); // înlocuire informativă
+    lcd.clear();                    //manual mode
+    lcd.print("Manual Mode");
     while(true)
     {
       manualMode();     
@@ -64,8 +65,8 @@ void loop()
   
   else                              //else automatic mode
   {
-    //lcd.clear();
-    Serial.println("Automatic Mode"); // înlocuire informativă
+    lcd.clear();
+    lcd.print("Automatic Mode");
     while(true)
     {
       automaticMode();
@@ -90,49 +91,43 @@ void manualMode()
   {
     case 'F':
     moveForward();
-    //lcd.clear();
-    //lcd.print("Forward");
-    Serial.println("Forward"); // adăugat în schimb
+    lcd.clear();
+    lcd.print("Forward");
     incomingByte='*';
     break;
     
     case 'B':
     moveBackward();
-    //lcd.clear();
-    //lcd.print("Backward");
-    \Serial.println("Backward");
+    lcd.clear();
+    lcd.print("Backward");
     incomingByte='*';
     break;
     
     case 'L':
     moveLeft();
-    //lcd.clear();
-    //lcd.print("Left");
-    Serial.println("Left");
+    lcd.clear();
+    lcd.print("Left");
     incomingByte='*';
     break;
     
     case 'R':
     moveRight();
-    //lcd.clear();
-    //lcd.print("Right");
-    Serial.println("Right");
+    lcd.clear();
+    lcd.print("Right");
     incomingByte='*';
     break;
     
     case 'S':
     moveStop();
-    //lcd.clear();
-    //lcd.print("Stop");
-    Serial.println("Stop");
+    lcd.clear();
+    lcd.print("Stop");
     incomingByte='*';
     break;
     
     case 'P':
     digitalWrite(pump, HIGH);
-    //lcd.clear();
-    //lcd.print("Pump ON");
-    Serial.println("Pump ON");
+    lcd.clear();
+    lcd.print("Pump ON");
     incomingByte='*';
     break;
     
@@ -165,24 +160,17 @@ void automaticMode()
   distance_L = readSensor_L();    //read distance from all the 3 sensors
   distance_M = readSensor_M();
   distance_R = readSensor_R();
-  //lcd.clear();    //print distance on LCD
-  //lcd.print("L=");
-  //lcd.print(distance_L);
-  Serial.print("L = ");
-  Serial.print(distance_L);
-  //lcd.print("cm ");
-  //lcd.print("M=");
-  //lcd.print(distance_M);
-  Serial.print("cm, M = ");
-  Serial.print(distance_M);
-  //lcd.print("cm");
-  //lcd.setCursor(0, 1);
-  //lcd.print("R=");
-  //lcd.print(distance_R);
-  //lcd.print("cm");
-  Serial.print("cm, R = ");
-  Serial.print(distance_R);
-  Serial.println("cm");
+  lcd.clear();    //print distance on LCD
+  lcd.print("L=");
+  lcd.print(distance_L);
+  lcd.print("cm ");
+  lcd.print("M=");
+  lcd.print(distance_M);
+  lcd.print("cm");
+  lcd.setCursor(0, 1);
+  lcd.print("R=");
+  lcd.print(distance_R);
+  lcd.print("cm");
   
   if(distance_M <= 20)    //if middle sensor distance is less than 20cm
   {
