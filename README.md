@@ -1,50 +1,57 @@
-<h1>🤖 Robot Autonom de Curățat Podele 🧹</h1>
+<h1>🤖 Robot Autonome de Nettoyage de Sols 🧹</h1>
 
-<p>Acest robot autonom este conceput pentru a curăța podelele folosind un sistem de mop rotativ și o pompă de apă pentru umidificare. Controlat de un <strong>Arduino Nano</strong> și echipat cu un modul Bluetooth <strong>HC-05</strong>, robotul poate fi operat de la distanță.</p>
+<p>Ce robot autonome est conçu pour nettoyer les sols à l'aide d'un système de serpillière rotative et d'une pompe à eau pour l'humidification. Contrôlé par un <strong>Arduino Nano</strong> et équipé d'un module Bluetooth <strong>HC-05</strong>, le robot peut être commandé à distance.</p>
 
-<p>Robotul se deplasează cu ajutorul a două motoare cu reductor și evită obstacolele utilizând senzori ultrasonici. Apa este pulverizată pe podea printr-un furtun conectat la o sticlă rezervor, iar mopul rotativ curăță eficient suprafața.</p>
+<p>Le robot se déplace à l'aide de deux moteurs avec réducteur et évite les obstacles grâce à des capteurs à ultrasons. L'eau est pulvérisée sur le sol via un tuyau connecté à une petite bouteille faisant office de réservoir, tandis que la serpillière rotative nettoie efficacement la surface.</p>
 
-<p>Afișajul <strong>LCD</strong> oferă informații în timp real despre starea robotului, iar modulul releu controlează pompa de apă. Dispozitivul este alimentat de baterii <strong>litiu-ion</strong> și integrează elemente de siguranță, precum un întrerupător general și butoane dedicate pentru pornire și oprire.</p>
+<p>L'afficheur <strong>LCD</strong> fournit des informations en temps réel sur l'état du robot, et le module relais contrôle la pompe à eau. L'appareil est alimenté par des batteries <strong>lithium-ion</strong> et intègre des éléments de sécurité comme un interrupteur général et des boutons dédiés pour l'allumage et l'arrêt.</p>
 
-<p>Pentru mai multe detalii și demonstrație practică, vezi acest videoclip:<br>
-📺 <a href="https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL" target="_blank">Demo Robot Curățare Podele</a></p>
+<p>Pour plus de détails et une démonstration pratique, consultez cette vidéo :<br>
+📺 <a href="https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL" target="_blank">Démo Robot de Nettoyage de Sols</a></p>
 
 <hr>
 
-<h2>🔧 Componente necesare</h2>
+<h2>🔧 Composants nécessaires</h2>
 
 <table border="1" cellspacing="0" cellpadding="6">
   <thead>
     <tr>
-      <th>#</th>
-      <th>Componentă</th>
+      <th>Produit</th>
+      <th>Quantité</th>
+      <th>Prix unitaire</th>
+      <th>Prix total</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>1</td><td>Arduino Nano</td></tr>
-    <tr><td>2</td><td>Modul Bluetooth HC-05</td></tr>
-    <tr><td>3</td><td>Placă driver motor L293D</td></tr>
-    <tr><td>4</td><td>3 senzori ultrasonici HC-SR04</td></tr>
-    <tr><td>5</td><td>3 cleme pentru senzori ultrasonici</td></tr>
-    <tr><td>6</td><td>Modul releu 5V cu un canal</td></tr>
-    <tr><td>7</td><td>2 motoare cu reductor 100 RPM</td></tr>
-    <tr><td>8</td><td>2 roți pentru motoare</td></tr>
-    <tr><td>9</td><td>2 cleme pentru motoare</td></tr>
-    <tr><td>10</td><td>Pompă de apă cu diafragmă 12V</td></tr>
-    <tr><td>11</td><td>3 baterii litiu-ion 18650</td></tr>
-    <tr><td>12</td><td>Suport pentru 3 celule sau 3 suporturi pentru o singură celulă</td></tr>
-    <tr><td>13</td><td>Regulator de tensiune 7805</td></tr>
-    <tr><td>14</td><td>Rezistențe de 1K, 2K și 10K (câte una din fiecare)</td></tr>
-    <tr><td>15</td><td>Pini header masculin/feminin</td></tr>
-    <tr><td>16</td><td>Terminal cu șurub</td></tr>
-    <tr><td>17</td><td>Buton de apăsare tip latching</td></tr>
-    <tr><td>18</td><td>Întrerupător On/Off</td></tr>
-    <tr><td>19</td><td>Placă de prototipare (perfboard)</td></tr>
-    <tr><td>20</td><td>Fire jumper mamă-mamă</td></tr>
-    <tr><td>21</td><td>Fire, piulițe și șuruburi</td></tr>
-    <tr><td>22</td><td>Accesoriu mop rotativ (din set mop și găleată)</td></tr>
-    <tr><td>23</td><td>Tub de vinil</td></tr>
-    <tr><td>24</td><td>Furtun de perfuzie glucoză</td></tr>
-    <tr><td>25</td><td>O sticlă mică de apă (ca rezervor de apă)</td></tr>
+    <tr><td>Carte de développement Arduino Nano + câble</td><td>1</td><td>29,36 lei</td><td>29,36 lei</td></tr>
+    <tr><td>Module Bluetooth HC-05 avec adaptateur</td><td>1</td><td>28,09 lei</td><td>28,09 lei</td></tr>
+    <tr><td>Capteur à ultrasons HC-SR04</td><td>3</td><td>6,49 lei</td><td>19,47 lei</td></tr>
+    <tr><td>Moteur avec réducteur et roue</td><td>2</td><td>14,99 lei</td><td>29,98 lei</td></tr>
+    <tr><td>Résistance 1.8KΩ 0.25W</td><td>5</td><td>0,10 lei</td><td>0,50 lei</td></tr>
+    <tr><td>Résistance 1KΩ 0.25W</td><td>5</td><td>0,10 lei</td><td>0,50 lei</td></tr>
+    <tr><td>Résistance 10KΩ 0.25W</td><td>5</td><td>0,10 lei</td><td>0,50 lei</td></tr>
+    <tr><td>Pompe à eau/air à diaphragme 12V</td><td>1</td><td>27,93 lei</td><td>27,93 lei</td></tr>
+    <tr><td>Module driver moteur L293D</td><td>1</td><td>16,04 lei</td><td>16,04 lei</td></tr>
+    <tr><td>Support accumulateur 18650 3S</td><td>1</td><td>4,25 lei</td><td>4,25 lei</td></tr>
+    <tr><td>Module relais 5V</td><td>1</td><td>6,55 lei</td><td>6,55 lei</td></tr>
+    <tr><td>Bouton poussoir à verrouillage</td><td>1</td><td>0,95 lei</td><td>0,95 lei</td></tr>
+    <tr><td>Plaque d'essai 400 points (breadboard)</td><td>1</td><td>6,37 lei</td><td>6,37 lei</td></tr>
+    <tr><td>Régulateur de tension LM7805</td><td>1</td><td>2,03 lei</td><td>2,03 lei</td></tr>
+    <tr><td>Barrette de broches mâles 2.54</td><td>1</td><td>2,02 lei</td><td>2,02 lei</td></tr>
+    <tr><td>Barrette de broches femelles 2.54</td><td>1</td><td>1,00 lei</td><td>1,00 lei</td></tr>
+    <tr><td>Connecteur PCB 2 broches 5mm</td><td>1</td><td>1,21 lei</td><td>1,21 lei</td></tr>
+    <tr><td>40 câbles Dupont M-M 10 cm</td><td>1</td><td>7,60 lei</td><td>7,60 lei</td></tr>
+    <tr><td>Support pour capteur ultrasons HC-SR04</td><td>3</td><td>4,95 lei</td><td>14,85 lei</td></tr>
+    <tr><td>40 câbles Dupont F-M 30 cm</td><td>1</td><td>7,94 lei</td><td>7,94 lei</td></tr>
+    <tr><td>Plaque PCB prototype 7x9</td><td>1</td><td>6,21 lei</td><td>6,21 lei</td></tr>
+    <tr><td>Support accumulateur 18650 1S</td><td>3</td><td>1,71 lei</td><td>5,13 lei</td></tr>
+    <tr><td>Afficheur LCD 1602 rétroéclairé</td><td>1</td><td>11,00 lei</td><td>11,00 lei</td></tr>
+    <tr><td>Interrupteur KCD11 2 broches</td><td>1</td><td>0,62 lei</td><td>0,62 lei</td></tr>
+    <tr><td>Plaque PCB prototype 9x15</td><td>1</td><td>10,03 lei</td><td>10,03 lei</td></tr>
+    <tr><td>Tuyau 6x8mm pour pompe à eau</td><td>1</td><td>6,26 lei</td><td>6,26 lei</td></tr>
+    <tr><td>Barrette femelle 2.54 (x3)</td><td>3</td><td>1,00 lei</td><td>3,00 lei</td></tr>
+    <tr><td>Barrette mâle 2.54 (x2)</td><td>2</td><td>2,02 lei</td><td>4,04 lei</td></tr>
+    <tr><td>Plaque PCB laminée 10x15</td><td>1</td><td>7,45 lei</td><td>7,45 lei</td></tr>
   </tbody>
 </table>
+
