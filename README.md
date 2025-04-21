@@ -52,6 +52,8 @@
     <tr><td>Barrette femelle 2.54 (x3)</td><td>3</td><td>1,00 lei</td><td>3,00 lei</td></tr>
     <tr><td>Barrette mâle 2.54 (x2)</td><td>2</td><td>2,02 lei</td><td>4,04 lei</td></tr>
     <tr><td>Plaque PCB laminée 10x15</td><td>1</td><td>7,45 lei</td><td>7,45 lei</td></tr>
+    <tr><td>Tête de serpillière rotative</td><td>1</td><td>-</td><td>-</td></tr>
+    <tr><td>Petite bouteille d'eau (réservoir) - 200 ml</td><td>1</td><td>-</td><td>-</td></tr>
   </tbody>
 </table>
 
