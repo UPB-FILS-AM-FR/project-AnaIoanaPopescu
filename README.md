@@ -13,6 +13,21 @@
 
 <p>Je développe ce robot Mop dans le but de simplifier les tâches de nettoyage au quotidien. En tant qu'étudiante passionnée par l'électronique et la programmation embarquée, ce projet me permet de mettre en pratique mes compétences tout en créant un outil utile pour la maison.</p>
 
+## Architecture
+
+<p>J’ai construit ce robot autour d’une carte <strong>Arduino Nano</strong> en y intégrant plusieurs modules essentiels :</p>
+
+<ul>
+  <li><strong>Un driver L293N</strong> pour contrôler deux moteurs à courant continu</li>
+  <li><strong>Trois capteurs à ultrasons</strong> (gauche, milieu, droite) pour détecter les obstacles</li>
+  <li><strong>Un module relais 5V</strong> pour activer une pompe à eau</li>
+  <li><strong>Une pompe 12V</strong> pour pulvériser l’eau sur le sol</li>
+  <li><strong>Une batterie 12V</strong> pour alimenter les moteurs et la pompe</li>
+  <li><strong>Un régulateur 5V</strong> pour fournir l’alimentation de la carte Arduino et des capteurs</li>
+</ul>
+
+<p>J’ai veillé à ce que tous les composants partagent une masse commune (GND) pour garantir la stabilité électrique.</p>
+
 
 <hr>
 
