@@ -53,7 +53,6 @@
     <tr><td>Résistance 1KΩ 0.25W</td><td>5</td><td>0,10 lei</td><td>0,50 lei</td></tr>
     <tr><td>Résistance 10KΩ 0.25W</td><td>5</td><td>0,10 lei</td><td>0,50 lei</td></tr>
     <tr><td>Pompe à eau/air à diaphragme 12V</td><td>1</td><td>27,93 lei</td><td>27,93 lei</td></tr>
-    <tr><td>Module driver moteur L293D</td><td>1</td><td>16,04 lei</td><td>16,04 lei</td></tr>
     <tr><td>Support accumulateur 18650 3S</td><td>1</td><td>4,25 lei</td><td>4,25 lei</td></tr>
     <tr><td>Module relais 5V</td><td>1</td><td>6,55 lei</td><td>6,55 lei</td></tr>
     <tr><td>Bouton poussoir à verrouillage</td><td>1</td><td>0,95 lei</td><td>0,95 lei</td></tr>
