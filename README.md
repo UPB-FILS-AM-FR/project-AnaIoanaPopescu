@@ -181,5 +181,3 @@
 ### Sensor Readings
 
 - Distance measurements are performed using the `ping_cm()` function from the `NewPing` library for each of the three ultrasonic sensors.
-
----
