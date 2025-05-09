@@ -9,6 +9,11 @@
 <p>Pour plus de détails et une démonstration pratique, consultez cette vidéo :<br>
 📺 <a href="https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL" target="_blank">Démo Robot de Nettoyage de Sols</a></p>
 
+## Motivation
+
+<p>Je développe ce robot Mop dans le but de simplifier les tâches de nettoyage au quotidien. En tant qu'étudiante passionnée par l'électronique et la programmation embarquée, ce projet me permet de mettre en pratique mes compétences tout en créant un outil utile pour la maison.</p>
+
+
 <hr>
 
 <h2>🔧 Composants nécessaires</h2>
