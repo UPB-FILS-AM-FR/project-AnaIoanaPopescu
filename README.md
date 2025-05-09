@@ -29,6 +29,43 @@
 <p>J’ai veillé à ce que tous les composants partagent une masse commune (GND) pour garantir la stabilité électrique.</p>
 
 
+## Diagramme fonctionnel (block diagram)
+
+```text
+           +--------------------+
+           |    Batterie 12V    |
+           +---------+----------+
+                     |
+                +----v----+
+                | L293N    |<-------------+----------------+
+                | Motor    |              |                |
+                | Driver   |          +---v---+        +---v---+
+                +----+-----+          | Moteur|        | Moteur|
+                     |                | gauche|        | droit |
+                     |                +-------+        +-------+
+                     |
+               +-----v------+
+               | Arduino    |
+               | Nano       |
+               +------------+
+              /   |   |   \  
+             /    |   |    \ 
+   +--------v+ +--v--+ +--v--+ +--------v--------+
+   | Capteur | |Captr| |Captr| |   Pin Sortie    |
+   | gauche  | |milieu| |droite| | vers relais    |
+   +---------+ +------+ +------+ +--------+--------+
+                                         |
+                                    +----v----+
+                                    | Relais   |
+                                    |  5V      |
+                                    +----+-----+
+                                         |
+                                    +----v----+
+                                    | Pompe    |
+                                    |  12V     |
+                                    +---------+
+
+
 <hr>
 
 <h2>🔧 Composants nécessaires</h2>
