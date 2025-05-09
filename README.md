@@ -79,10 +79,8 @@
   </tbody>
 </table>
 
-```markdown
-## Diagramme fonctionnel (block diagram)
 
-```text
+## Diagramme fonctionnel (block diagram)
            +--------------------+
            |    Batterie 12V    |
            +---------+----------+
