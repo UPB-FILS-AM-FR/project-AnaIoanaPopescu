@@ -158,19 +158,6 @@
 - The robot uses two motors to move forward, backward, left, and right. Speed is controlled using PWM signals (range from 125 to 255).
 - `motor_speed`: Variable to set the motor speed.
 
-### Manual Mode
-
-- In **manual mode**, the robot listens for serial commands to control movement and the pump via Bluetooth.
-- Commands include:
-  - `F`: Move forward
-  - `B`: Move backward
-  - `L`: Turn left
-  - `R`: Turn right
-  - `S`: Stop
-  - `P`: Turn on the pump
-  - `p`: Turn off the pump
-  - `1`, `2`, `3`: Set motor speed
-
 ### Automatic Mode
 
 - The robot uses three ultrasonic sensors to detect obstacles.
