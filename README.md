@@ -81,6 +81,8 @@
 
 
 ## Diagramme fonctionnel (block diagram)
+
+```text
            +--------------------+
            |    Batterie 12V    |
            +---------+----------+
@@ -113,3 +115,4 @@
                                     | Pompe    |
                                     |  12V     |
                                     +---------+
+```
