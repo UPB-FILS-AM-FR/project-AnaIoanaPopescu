@@ -116,3 +116,76 @@
                                     |  12V     |
                                     +---------+
 ```
+
+# Cleaning Robot Project
+
+## Libraries
+
+| **Library**        | **Description**                               | **Usage**                                                                                     |
+|--------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
+| **NewPing**        | Library for interfacing ultrasonic sensors    | Used for measuring distance with ultrasonic sensors.                                          |
+| **LiquidCrystal**  | Library for interfacing LCD screens           | Used to display information (like distance readings or status messages) on an LCD screen.     |
+
+---
+
+## Log
+
+| **Week**           | **Date Range**  | **Summary**                                                                                               |
+|--------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
+| **Week 6**         | 6 - 12 May      | Initial setup of robot and hardware configuration. Testing basic motor movements and manual control mode. |
+| **Week 7**         | 13 - 19 May     | Developed automatic mode logic based on ultrasonic sensor readings. Added basic obstacle avoidance.       |
+| **Week 20**        | 20 - 26 May     | Fine-tuned motor control and obstacle detection. Completed final tests for manual and automatic modes.   |
+
+---
+
+## Code Overview
+
+### Pin Initialization
+
+- **Ultrasonic Sensors:**
+  - `echo_L`, `trig_L`: Left sensor pins.
+  - `echo_M`, `trig_M`: Middle sensor pins.
+  - `echo_R`, `trig_R`: Right sensor pins.
+  
+- **Motor Control:**
+  - `L1`, `L2`, `R1`, `R2`: Motor control pins (for controlling the left and right motors).
+  
+- **Button and Pump:**
+  - `button`: Pin for switching between manual and automatic modes.
+  - `pump`: Pin for controlling a water pump or spray mechanism.
+
+### Motor Control
+
+- The robot uses two motors to move forward, backward, left, and right. Speed is controlled using PWM signals (range from 125 to 255).
+- `motor_speed`: Variable to set the motor speed.
+
+### Manual Mode
+
+- In **manual mode**, the robot listens for serial commands to control movement and the pump via Bluetooth.
+- Commands include:
+  - `F`: Move forward
+  - `B`: Move backward
+  - `L`: Turn left
+  - `R`: Turn right
+  - `S`: Stop
+  - `P`: Turn on the pump
+  - `p`: Turn off the pump
+  - `1`, `2`, `3`: Set motor speed
+
+### Automatic Mode
+
+- The robot uses three ultrasonic sensors to detect obstacles.
+- If the middle sensor detects an obstacle (distance less than 20 cm), the robot will attempt to avoid it by turning left or right, depending on the available space.
+- The robot moves forward if no obstacles are detected.
+
+### Sensor Readings
+
+- Distance measurements are performed using the `ping_cm()` function from the `NewPing` library for each of the three ultrasonic sensors.
+
+### Button Logic
+
+- The robot switches between **manual mode** and **automatic mode** based on the button input:
+  - If the button is pressed, the robot enters **manual mode**.
+  - If not pressed, it runs in **automatic mode**.
+
+---
