@@ -158,10 +158,15 @@
 
 ### Automatic Mode
 
-- The robot uses three ultrasonic sensors to detect obstacles.
-- If the middle sensor detects an obstacle (distance less than 20 cm), the robot will attempt to avoid it by turning left or right, depending on the available space.
-- The robot moves forward if no obstacles are detected.
+In **automatic mode**, the robot uses three ultrasonic sensors to detect obstacles.
+
+- **Left, middle, and right sensors** are used to measure the distance in front of the robot.
+- If the middle sensor detects an obstacle closer than 20 cm, the robot will attempt to avoid it by turning left or right, depending on the available space.
+- If both the left and right sensors are blocked, the robot will move backward to try and find a clear path.
+- The robot will continue moving forward if no obstacles are detected.
 
 ### Sensor Readings
 
 - Distance measurements are performed using the `ping_cm()` function from the `NewPing` library for each of the three ultrasonic sensors.
+
+---
