@@ -124,7 +124,6 @@
 | **Library**        | **Description**                               | **Usage**                                                                                     |
 |--------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
 | **NewPing**        | Library for interfacing ultrasonic sensors    | Used for measuring distance with ultrasonic sensors.                                          |
-| **LiquidCrystal**  | Library for interfacing LCD screens (optional)           | Used to display information (like distance readings or status messages) on an LCD screen.     |
 
 ---
 
