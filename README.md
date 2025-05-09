@@ -150,7 +150,6 @@
   - `L1`, `L2`, `R1`, `R2`: Motor control pins (for controlling the left and right motors).
   
 - **Button and Pump:**
-  - `button`: Pin for switching between manual and automatic modes.
   - `pump`: Pin for controlling a water pump or spray mechanism.
 
 ### Motor Control
