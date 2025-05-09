@@ -182,10 +182,4 @@
 
 - Distance measurements are performed using the `ping_cm()` function from the `NewPing` library for each of the three ultrasonic sensors.
 
-### Button Logic
-
-- The robot switches between **manual mode** and **automatic mode** based on the button input:
-  - If the button is pressed, the robot enters **manual mode**.
-  - If not pressed, it runs in **automatic mode**.
-
 ---
