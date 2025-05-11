@@ -1,6 +1,8 @@
 <h1>🤖 Robot Autonome de Nettoyage de Sols 🧹</h1>
 
-<p>Ce robot autonome est conçu pour nettoyer les sols à l'aide d'un système de serpillière rotative et d'une pompe à eau pour l'humidification. Contrôlé par un <strong>Arduino Nano</strong> et équipé d'un module Bluetooth <strong>HC-05</strong>, le robot peut être commandé à distance.</p>
+## Description
+
+<p>Ce robot autonome est conçu pour nettoyer les sols à l'aide d'un système de serpillière rotative et d'une pompe à eau pour l'humidification. Contrôlé par un <strong>Arduino Nano</strong>, le robot peut eviter les obstables a partir de 20 cm.</p>
 
 <p>Le robot se déplace à l'aide de deux moteurs avec réducteur et évite les obstacles grâce à des capteurs à ultrasons. L'eau est pulvérisée sur le sol via un tuyau connecté à une petite bouteille faisant office de réservoir, tandis que la serpillière rotative nettoie efficacement la surface.</p>
 
@@ -27,9 +29,6 @@
 </ul>
 
 <p>J’ai veillé à ce que tous les composants partagent une masse commune (GND) pour garantir la stabilité électrique.</p>
-
-
-
 
 <hr>
 
@@ -120,6 +119,8 @@
 
 ## Libraries
 
+<p>J’ai utilise le IDE Arduino et j'ai lui initialise pour un bon fonctionnement. </p>
+
 | **Library**        | **Description**                               | **Usage**                                                                                     |
 |--------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
 | **NewPing**        | Library for interfacing ultrasonic sensors    | Used for measuring distance with ultrasonic sensors.                                          |
@@ -130,9 +131,9 @@
 
 | **Week**           | **Date Range**  | **Summary**                                                                                               |
 |--------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
-| **Week 6**         | 6 - 12 May      | Initial setup of robot and hardware configuration. Testing basic motor movements and manual control mode. |
-| **Week 7**         | 13 - 19 May     | Developed automatic mode logic based on ultrasonic sensor readings. Added basic obstacle avoidance.       |
-| **Week 20**        | 20 - 26 May     | Fine-tuned motor control and obstacle detection. Completed final tests for manual and automatic modes.   |
+| **Week 6**         | 6 - 12 May      | Initial setup of robot and hardware configuration. |
+| **Week 7**         | 13 - 19 May     | Developed automatic mode logic based on ultrasonic sensor readings. Try the batteries and their well fonction.       |
+| **Week 20**        | 20 - 26 May     | Fine-tuned motor control and obstacle detection. Completed final tests for automatic mode.   |
 
 ---
 
