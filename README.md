@@ -188,3 +188,12 @@ En **mode automatique**, le robot utilise trois capteurs à ultrasons pour déte
 
 - Chaque capteur utilise la fonction `ping_cm()` de la librairie **NewPing** pour mesurer la distance.
 - Si aucune réponse n’est détectée, la distance est estimée à `250 cm` (valeur par défaut).
+
+  ## 📸 Photos du robot en temps réel
+
+<p align="center">
+  <img src="poza1.jpeg" alt="Les pièces" width="30%" style="margin-right:10px;">
+  <img src="poza2.jpeg" alt="Le châssis" width="30%" style="margin-right:10px;">
+  <img src="poza3.jpeg" alt="Tous les composants" width="30%">
+</p>
+
