@@ -20,8 +20,8 @@
 <p>J’ai construit ce robot autour d’une carte <strong>Arduino Nano</strong> en y intégrant plusieurs modules essentiels :</p>
 
 <ul>
-  <li><strong>Un driver L293N</strong> pour contrôler deux moteurs à courant continu</li>
-  <li><strong>Trois capteurs à ultrasons</strong> (gauche, milieu, droite) pour détecter les obstacles</li>
+  <li><strong>🔁Un driver L293N</strong> pour contrôler deux moteurs à courant continu</li>
+  <li><strong>📏Trois capteurs à ultrasons HC-SR04</strong> (gauche, milieu, droite) pour détecter les obstacles</li>
   <li><strong>Un module relais 5V</strong> pour activer une pompe à eau</li>
   <li><strong>🌊Une pompe 12V</strong> pour pulvériser l’eau sur le sol</li>
   <li><strong>🔋 Une batterie 12V</strong> pour alimenter les moteurs et la pompe</li>
