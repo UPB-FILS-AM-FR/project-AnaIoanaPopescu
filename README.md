@@ -196,4 +196,9 @@ En **mode automatique**, le robot utilise trois capteurs à ultrasons pour déte
   <img src="poza2.jpeg" alt="Le châssis" width="30%" style="margin-right:10px;">
   <img src="poza3.jpeg" alt="Tous les composants" width="30%">
 </p>
+<p align="center">
+  <img src="poza6.jpeg" width="30%" style="margin-right:10px;">
+  <img src="poza5.jpeg" width="30%" style="margin-right:10px;">
+  <img src="poza4.jpeg" width="30%">
+</p>
 
