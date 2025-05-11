@@ -74,7 +74,18 @@
   </tbody>
 </table>
 
-## Le schema electrique
+---
+
+## 🖥️ Schéma électrique
+
+Ce schéma illustre toutes les connexions entre les composants, incluant :
+- l’alimentation 11.1V vers Arduino, relais et moteur
+- les liaisons entre capteurs, L293N et la carte Arduino
+- les masses communes pour assurer la stabilité du système
+
+![Schéma électrique du robot](Schema_Robot_Ana.png)
+
+---
 
 
 ## Diagramme fonctionnel (block diagram)
@@ -114,59 +125,65 @@
                                     +---------+
 ```
 
-# Cleaning Robot Project
+# Projet Robot de Nettoyage
 
-## Libraries
+## Librairies
 
-<p>J’ai utilise le IDE Arduino et j'ai lui initialise pour un bon fonctionnement. </p>
+J’ai utilisé l’IDE Arduino et je l’ai initialisé pour un bon fonctionnement.
 
-| **Library**        | **Description**                               | **Usage**                                                                                     |
-|--------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
-| **NewPing**        | Library for interfacing ultrasonic sensors    | Used for measuring distance with ultrasonic sensors.                                          |
-
----
-
-## Log
-
-| **Week**           | **Date Range**  | **Summary**                                                                                               |
-|--------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
-| **Week 6**         | 6 - 12 May      | Initial setup of robot and hardware configuration. |
-| **Week 7**         | 13 - 19 May     | Developed automatic mode logic based on ultrasonic sensor readings. Try the batteries and their well fonction.       |
-| **Week 20**        | 20 - 26 May     | Fine-tuned motor control and obstacle detection. Completed final tests for automatic mode.   |
+| **Librairie** | **Description**                              | **Utilisation**                                                           |
+|---------------|----------------------------------------------|---------------------------------------------------------------------------|
+| **NewPing**   | Librairie pour capteurs à ultrasons          | Utilisée pour mesurer les distances avec les capteurs HC-SR04.           |
 
 ---
 
-## Code Overview
+## Journal de développement
 
-### Pin Initialization
+| **Semaine** | **Période**     | **Résumé**                                                                                     |
+|-------------|-----------------|------------------------------------------------------------------------------------------------|
+| Semaine 6   | 6 - 12 mai       | Configuration initiale du robot et du matériel.                                                |
+| Semaine 7   | 13 - 19 mai      | Développement de la logique en mode automatique basée sur les capteurs à ultrasons.           |
+| Semaine 8   | 20 - 26 mai      | Ajustement du contrôle des moteurs et de la détection d’obstacles. Tests finaux réalisés.     |
 
-- **Ultrasonic Sensors:**
-  - `echo_L`, `trig_L`: Left sensor pins.
-  - `echo_M`, `trig_M`: Middle sensor pins.
-  - `echo_R`, `trig_R`: Right sensor pins.
+---
+
+## Aperçu du Code
+
+### Initialisation des broches
+
+- **Capteurs à ultrasons :**
+  - `echo_L`, `trig_L` : capteur gauche.
+  - `echo_M`, `trig_M` : capteur central.
+  - `echo_R`, `trig_R` : capteur droit.
   
-- **Motor Control:**
-  - `L1`, `L2`, `R1`, `R2`: Motor control pins (for controlling the left and right motors).
+- **Contrôle des moteurs :**
+  - `L1`, `L2`, `R1`, `R2` : broches utilisées pour commander les moteurs gauche et droit.
   
-- **Pump:**
-  - `pump`: Pin for controlling a water pump or spray mechanism.
-
-### Motor Control
-
-- The robot uses two motors to move forward, backward, left, and right. Speed is controlled using PWM signals (range from 125 to 255).
-- `motor_speed`: Variable to set the motor speed.
-
-### Automatic Mode
-
-In **automatic mode**, the robot uses three ultrasonic sensors to detect obstacles.
-
-- **Left, middle, and right sensors** are used to measure the distance in front of the robot.
-- If the middle sensor detects an obstacle closer than 20 cm, the robot will attempt to avoid it by turning left or right, depending on the available space.
-- If both the left and right sensors are blocked, the robot will move backward to try and find a clear path.
-- The robot will continue moving forward if no obstacles are detected.
-
-### Sensor Readings
-
-- Distance measurements are performed using the `ping_cm()` function from the `NewPing` library for each of the three ultrasonic sensors.
+- **Pompe :**
+  - `pump` : broche utilisée pour activer ou désactiver la pompe à eau.
 
 ---
+
+### Contrôle des moteurs
+
+- Le robot utilise deux moteurs pour se déplacer vers l’avant, l’arrière, à gauche ou à droite.
+- La vitesse est contrôlée via des signaux PWM (valeurs comprises entre 125 et 255).
+- La variable `motor_speed` permet de définir cette vitesse.
+
+---
+
+### Mode automatique
+
+En **mode automatique**, le robot utilise trois capteurs à ultrasons pour détecter les obstacles.
+
+- Si un obstacle est détecté à moins de 20 cm par le capteur central :
+  - Le robot choisit la direction avec le plus d’espace (gauche ou droite).
+  - Si les deux côtés sont bloqués, il recule.
+- S’il n’y a pas d’obstacles, il continue d’avancer.
+
+---
+
+### Lecture des capteurs
+
+- Chaque capteur utilise la fonction `ping_cm()` de la librairie **NewPing** pour mesurer la distance.
+- Si aucune réponse n’est détectée, la distance est estimée à `250 cm` (valeur par défaut).
