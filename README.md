@@ -2,18 +2,18 @@
 
 ## Description
 
-<p>Ce robot autonome est conçu pour nettoyer les sols à l'aide d'un système de serpillière rotative et d'une pompe à eau pour l'humidification. Contrôlé par un <strong>Arduino Nano</strong>, le robot peut eviter les obstables a partir de 20 cm.</p>
+<p>Ce robot autonome est conçu pour nettoyer les sols à l'aide d'un système de serpillière rotative et d'une pompe à eau pour l'humidification. Contrôlé par un <strong>Arduino Nano</strong>, le robot peut eviter les obstables à partir de 20 cm.</p>
 
 <p>Le robot se déplace à l'aide de deux moteurs avec réducteur et évite les obstacles grâce à des capteurs à ultrasons. L'eau est pulvérisée sur le sol via un tuyau connecté à une petite bouteille faisant office de réservoir, tandis que la serpillière rotative nettoie efficacement la surface.</p>
 
-<p>L'afficheur <strong>LCD</strong> fournit des informations en temps réel sur l'état du robot, et le module relais contrôle la pompe à eau. L'appareil est alimenté par des batteries <strong>lithium-ion</strong> et intègre des éléments de sécurité comme un interrupteur général et des boutons dédiés pour l'allumage et l'arrêt.</p>
+<p>L'appareil est alimenté par des batteries <strong>lithium-ion</strong> et intègre des éléments de sécurité comme un interrupteur général et des boutons dédiés pour l'allumage et l'arrêt.</p>
 
 <p>Pour plus de détails et une démonstration pratique, consultez cette vidéo :<br>
 📺 <a href="https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL" target="_blank">Démo Robot de Nettoyage de Sols</a></p>
 
 ## Motivation
 
-<p>Je développe ce robot Mop dans le but de simplifier les tâches de nettoyage au quotidien. En tant qu'étudiante passionnée par l'électronique et la programmation embarquée, ce projet me permet de mettre en pratique mes compétences tout en créant un outil utile pour la maison.</p>
+<p> Ce projet est né de ma volonté de simplifier les tâches ménagères à la maison, ou au quotidien. En tant qu'étudiante passionnée par l'électronique et la programmation embarquée, ce projet me permet de mettre en pratique mes compétences tout en créant un outil utile pour la maison.</p>
 
 ## Architecture
 
@@ -23,9 +23,10 @@
   <li><strong>Un driver L293N</strong> pour contrôler deux moteurs à courant continu</li>
   <li><strong>Trois capteurs à ultrasons</strong> (gauche, milieu, droite) pour détecter les obstacles</li>
   <li><strong>Un module relais 5V</strong> pour activer une pompe à eau</li>
-  <li><strong>Une pompe 12V</strong> pour pulvériser l’eau sur le sol</li>
-  <li><strong>Une batterie 12V</strong> pour alimenter les moteurs et la pompe</li>
-  <li><strong>Un régulateur 5V</strong> pour fournir l’alimentation de la carte Arduino et des capteurs</li>
+  <li><strong>🌊Une pompe 12V</strong> pour pulvériser l’eau sur le sol</li>
+  <li><strong>🔋 Une batterie 12V</strong> pour alimenter les moteurs et la pompe</li>
+  <li><strong>🔌Un régulateur 5V</strong> pour fournir l’alimentation de la carte Arduino et des capteurs</li>
+  <li><strong>🧠Code intelligent</strong> avec gestion des distances et des réactions</li>
 </ul>
 
 <p>J’ai veillé à ce que tous les composants partagent une masse commune (GND) pour garantir la stabilité électrique.</p>
