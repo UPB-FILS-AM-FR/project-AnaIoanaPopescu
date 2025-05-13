@@ -1,4 +1,4 @@
-<h1>🤖 Robot Autonome de Nettoyage de Sols 🧹</h1>
+<h1>Robot Autonome de Nettoyage de Sols</h1>
 
 ## Description
 
@@ -17,13 +17,13 @@
 <p>J’ai construit ce robot autour d’une carte <strong>Arduino Nano</strong> en y intégrant plusieurs modules essentiels :</p>
 
 <ul>
-  <li><strong>🔁Un driver L293N</strong> pour contrôler deux moteurs à courant continu</li>
-  <li><strong>📏Trois capteurs à ultrasons HC-SR04</strong> (gauche, milieu, droite) pour détecter les obstacles</li>
+  <li><strong>Un driver L293N</strong> pour contrôler deux moteurs à courant continu</li>
+  <li><strong>Trois capteurs à ultrasons HC-SR04</strong> (gauche, milieu, droite) pour détecter les obstacles</li>
   <li><strong>Un module relais 5V</strong> pour activer une pompe à eau</li>
-  <li><strong>🌊Une pompe 12V</strong> pour pulvériser l’eau sur le sol</li>
-  <li><strong>🔋 Une batterie 12V</strong> pour alimenter les moteurs et la pompe</li>
-  <li><strong>🔌Un régulateur 5V</strong> pour fournir l’alimentation de la carte Arduino et des capteurs</li>
-  <li><strong>🧠Code intelligent</strong> avec gestion des distances et des réactions</li>
+  <li><strong>Une pompe 12V</strong> pour pulvériser l’eau sur le sol</li>
+  <li><strong>Une batterie 12V</strong> pour alimenter les moteurs et la pompe</li>
+  <li><strong>Un régulateur 5V</strong> pour fournir l’alimentation de la carte Arduino et des capteurs</li>
+  <li><strong>Code intelligent</strong> avec gestion des distances et des réactions</li>
 </ul>
 
 <p>J’ai veillé à ce que tous les composants partagent une masse commune (GND) pour garantir la stabilité électrique.</p>
@@ -74,7 +74,7 @@
 
 ---
 
-## 🖥️ Schéma électrique
+## Schéma électrique
 
 Ce schéma illustre toutes les connexions entre les composants, incluant :
 - l’alimentation 11.1V vers Arduino, relais et moteur
@@ -186,7 +186,7 @@ En **mode automatique**, le robot utilise trois capteurs à ultrasons pour déte
 - Chaque capteur utilise la fonction `ping_cm()` de la librairie **NewPing** pour mesurer la distance.
 - Si aucune réponse n’est détectée, la distance est estimée à `250 cm` (valeur par défaut).
 
-  ## 📸 Photos du robot en temps réel
+  ## Photos du robot en temps réel
 
 <p align="center">
   <img src="poza1.jpeg" alt="Les pièces" width="30%" style="margin-right:10px;">
@@ -201,23 +201,23 @@ En **mode automatique**, le robot utilise trois capteurs à ultrasons pour déte
 
 ---
 
-## 📚 LIENS UTILES
+## LIENS UTILES
 
-### 🎥 Vidéos de projets similaires
+### Vidéos de projets similaires
 
 - [Démo Robot de Nettoyage de Sols](https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL)
 - [CleanSweep: The Floor Cleaning Robot- Part 1 | Constructing | DIY](https://www.youtube.com/watch?v=JlrvP6vElCk)
 - [CleanSweep: The Floor Cleaning Robot- Part 2 | Testing](https://www.youtube.com/watch?v=B92vy_2ewfg)
 ---
 
-### 📘 Tutoriels techniques (composants)
+### Tutoriels techniques (composants)
 
 - [L298n Dual H-Bridge Motor Driver : DC Motors : PWM : Stepper Motors : Eye-On-Stuff](https://www.youtube.com/watch?v=_I-7XYaAtAo)
 - [Ultrasonic sensor working principle | How does HC-SR04 Work](https://www.youtube.com/watch?v=vf2lW4LkmMQ)
 
 ---
 
-### 🧾 Documentation officielle & fiches techniques
+### Documentation officielle & fiches techniques
 
 - [HC-SR04 Sensor Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
 - [L298N Motor Driver Datasheet](https://www.st.com/resource/en/datasheet/l298.pdf)
