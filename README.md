@@ -8,9 +8,6 @@
 
 <p>L'appareil est alimenté par des batteries <strong>lithium-ion</strong> et intègre des éléments de sécurité comme un interrupteur général et des boutons dédiés pour l'allumage et l'arrêt.</p>
 
-<p>Pour plus de détails et une démonstration pratique, consultez cette vidéo :<br>
-📺 <a href="https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL" target="_blank">Démo Robot de Nettoyage de Sols</a></p>
-
 ## Motivation
 
 <p> Ce projet est né de ma volonté de simplifier les tâches ménagères à la maison, ou au quotidien. En tant qu'étudiante passionnée par l'électronique et la programmation embarquée, ce projet me permet de mettre en pratique mes compétences tout en créant un outil utile pour la maison.</p>
@@ -208,7 +205,7 @@ En **mode automatique**, le robot utilise trois capteurs à ultrasons pour déte
 
 ### 🎥 Vidéos de projets similaires
 
-- [Demo Robot de Netoyage de sols](https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL)
+- [Démo Robot de Nettoyage de Sols](https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL)
 - [CleanSweep: The Floor Cleaning Robot- Part 1 | Constructing | DIY](https://www.youtube.com/watch?v=JlrvP6vElCk)
 - [CleanSweep: The Floor Cleaning Robot- Part 2 | Testing](https://www.youtube.com/watch?v=B92vy_2ewfg)
 ---
