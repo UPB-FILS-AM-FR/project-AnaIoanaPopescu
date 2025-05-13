@@ -69,7 +69,7 @@
     <tr><td>Tuyau 6x8mm pour pompe à eau</td><td>1</td><td>6,26 lei</td><td>6,26 lei</td></tr>
     <tr><td>Barrette femelle 2.54 (x3)</td><td>3</td><td>1,00 lei</td><td>3,00 lei</td></tr>
     <tr><td>Barrette mâle 2.54 (x2)</td><td>2</td><td>2,02 lei</td><td>4,04 lei</td></tr>
-    <tr><td>Driver Moteur</td><td>1</td><td>11 lei</td><td>11 lei</td></tr>
+    <tr><td>Driver Moteur L293N</td><td>1</td><td>11 lei</td><td>11 lei</td></tr>
     <tr><td>Tête de serpillière rotative</td><td>1</td><td>-</td><td>-</td></tr>
     <tr><td>Petite bouteille d'eau (réservoir) - 200 ml</td><td>1</td><td>-</td><td>-</td></tr>
   </tbody>
@@ -202,3 +202,27 @@ En **mode automatique**, le robot utilise trois capteurs à ultrasons pour déte
   <img src="poza4.jpeg" width="30%">
 </p>
 
+---
+
+## 📚 LIENS UTILES
+
+### 🎥 Vidéos de projets similaires
+
+- [Demo Robot de Netoyage de sols](https://youtu.be/ecNfo2phP6g?si=pkN76e_93W3H9zNL)
+- [CleanSweep: The Floor Cleaning Robot- Part 1 | Constructing | DIY](https://www.youtube.com/watch?v=JlrvP6vElCk)
+- [CleanSweep: The Floor Cleaning Robot- Part 2 | Testing](https://www.youtube.com/watch?v=B92vy_2ewfg)
+---
+
+### 📘 Tutoriels techniques (composants)
+
+- [L298n Dual H-Bridge Motor Driver : DC Motors : PWM : Stepper Motors : Eye-On-Stuff](https://www.youtube.com/watch?v=_I-7XYaAtAo)
+- [Ultrasonic sensor working principle | How does HC-SR04 Work](https://www.youtube.com/watch?v=vf2lW4LkmMQ)
+
+---
+
+### 🧾 Documentation officielle & fiches techniques
+
+- [HC-SR04 Sensor Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
+- [L298N Motor Driver Datasheet](https://www.st.com/resource/en/datasheet/l298.pdf)
+
+---
