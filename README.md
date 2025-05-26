@@ -81,7 +81,7 @@ Ce schéma illustre toutes les connexions entre les composants, incluant :
 - les liaisons entre capteurs, L293N et la carte Arduino
 - les masses communes pour assurer la stabilité du système
 
-![Schéma électrique du robot](Schema_Robot_Ana.png)
+![Schéma électrique du robot](Schematic Robot.png)
 
 ---
 
