@@ -171,10 +171,10 @@ En **mode automatique**, le robot utilise trois capteurs à ultrasons pour déte
 
 <p align="center">
   <video width="640" height="360" controls>
-    <source src="Video Robot.mp4" type="video/mp4">
+    <source src="Video_Robot.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture de vidéos HTML5.
   </video>
 </p>
-
 
 ## LIENS UTILES
 
