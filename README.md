@@ -85,41 +85,7 @@ Ce schéma illustre toutes les connexions entre les composants, incluant :
 
 
 ## Diagramme fonctionnel (block diagram)
-
-```text
-           +--------------------+
-           |    Batterie 12V    |
-           +---------+----------+
-                     |
-                +----v----+
-                | L293N    |<-------------+----------------+
-                | Motor    |              |                |
-                | Driver   |          +---v---+        +---v---+
-                +----+-----+          | Moteur|        | Moteur|
-                     |                | gauche|        | droit |
-                     |                +-------+        +-------+
-                     |
-               +-----v------+
-               | Arduino    |
-               | Nano       |
-               +------------+
-              /   |   |   \  
-             /    |   |    \ 
-   +--------v+ +--v--+ +--v--+ +--------v--------+
-   | Capteur | |Captr| |Captr| |   Pin Sortie    |
-   | gauche  | |milieu| |droite| | vers relais    |
-   +---------+ +------+ +------+ +--------+--------+
-                                         |
-                                    +----v----+
-                                    | Relais   |
-                                    |  5V      |
-                                    +----+-----+
-                                         |
-                                    +----v----+
-                                    | Pompe    |
-                                    |  12V     |
-                                    +---------+
-```
+<img src="Block Diagram.png" width="800">
 
 # Projet Robot de Nettoyage
 
