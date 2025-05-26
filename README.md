@@ -169,8 +169,6 @@ En **mode automatique**, le robot utilise trois capteurs à ultrasons pour déte
   <img src="Fata robot.jpeg" alt="Résultat après nettoyage" width="30%" style="margin-right:10px;">
 </p>
 
-(Video%20Robot.mp4)
-
 ## LIENS UTILES
 
 ### Vidéos de projets similaires
