@@ -1,161 +1,134 @@
-#include <NewPing.h>    // Import libraries
-#include <LiquidCrystal.h>
+#include <Arduino.h>
 
-// Pin Initialization
-const int echo_L = 2;
-const int trig_L = 3;
-const int echo_M = 4;
-const int trig_M = 5;
-const int echo_R = 7;
-const int trig_R = 8;
-const int L1 = 6;
-const int L2 = 9;
-const int R1 = 10;
-const int R2 = 11;
-const int button = 12;
-const int pump = 13;
-const int ENA = 10;  // D10
-const int ENB = A2;  // A2
-int motor_speed = 255;
-int max_distance = 200;
-int distance_L = 0;
-int distance_M = 0;
-int distance_R = 0;
-char incomingByte;
+// Senzor frontal
+#define trigPin1 A1
+#define echoPin1 A2
 
-NewPing sonar_L(trig_L, echo_L, max_distance);
-NewPing sonar_M(trig_M, echo_M, max_distance);
-NewPing sonar_R(trig_R, echo_R, max_distance);
+// Senzor lateral
+#define trigPin2 3
+#define echoPin2 2
+#define releuPin 7  // Sau alt pin digital liber
+
+
+// Motoare (prin L293N)
+const int ENA = 5;
+const int ENB = 6;
+const int IN1 = 9;
+const int IN2 = 8;
+const int IN3 = 10;
+const int IN4 = 11;
+
+int motor_speed = 200;
+long duration1, duration2;
+int distance1, distance2;
+
+int readDistance1();
+int readDistance2();
+void moveForward();
+void moveBackward();
+void stopMotors();
 
 void setup() {
-  pinMode(L1, OUTPUT);
-  pinMode(L2, OUTPUT);
-  pinMode(R1, OUTPUT);
-  pinMode(R2, OUTPUT);
-  pinMode(button, INPUT);
-  pinMode(pump, OUTPUT);
+  Serial.begin(9600);
+
+  // Senzor 1
+  pinMode(trigPin1, OUTPUT);
+  pinMode(echoPin1, INPUT);
+
+  // Senzor 2
+  pinMode(trigPin2, OUTPUT);
+  pinMode(echoPin2, INPUT);
+
+  // Motoare
   pinMode(ENA, OUTPUT);
   pinMode(ENB, OUTPUT);
-  analogWrite(ENA, motor_speed);  // setează viteza implicită
-  analogWrite(ENB, motor_speed);
-  digitalWrite(L1, LOW); 
-  digitalWrite(L2, LOW);
-  digitalWrite(R1, LOW);
-  digitalWrite(R2, LOW);
-  digitalWrite(pump, LOW);
-  Serial.begin(9600);  // Begin serial communication at 9600 baud rate
-  delay(2000);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+  pinMode(releuPin, OUTPUT);
+  digitalWrite(releuPin, HIGH); // Releu inactiv la pornire (activ LOW)
+
+
+  stopMotors();
 }
 
 void loop() {
-  distance_L = readSensor_L();
-  distance_M = readSensor_M();
-  distance_R = readSensor_R();
-  
-  Serial.print("L=");
-  Serial.print(distance_L);
-  Serial.print("cm M=");
-  Serial.print(distance_M);
-  Serial.print("cm R=");
-  Serial.print(distance_R);
-  Serial.println("cm");
+  distance1 = readDistance1();  // Față
+  distance2 = readDistance2();  // Lateral
 
-  if (distance_M <= 20) {
-    // Obstacle detection logic
-    if (distance_R > distance_L) {
-      if ((distance_R <= 20) && (distance_L <= 20)) {
-        moveStop();
-        delay(200);
-        moveBackward();
-        delay(2000);
-      } else {
-        moveBackward();
-        delay(500);
-        moveRight();
-        delay(2000);
-      }
-    } else {
-      if ((distance_R <= 20) && (distance_L <= 20)) {
-        moveStop();
-        delay(200);
-        moveBackward();
-        delay(2000);
-      } else {
-        moveBackward();
-        delay(500);
-        moveLeft();
-        delay(2000);
-      }
-    }
-  } else if (distance_R <= 15) {
-    moveLeft();
-    delay(500);
-  } else if (distance_L <= 15) {
-    moveRight();
-    delay(500);
+  Serial.print("Fata: ");
+  Serial.print(distance1);
+  Serial.print(" cm | Lateral: ");
+  Serial.print(distance2);
+  Serial.println(" cm");
+
+  if (distance1 <= 20 || distance2 <= 20) {
+    digitalWrite(releuPin, LOW);  // Releu activat = bec verde aprins
+    moveBackward();
+    delay(2000);
+    stopMotors();
+    digitalWrite(releuPin, HIGH); // Releu oprit
   } else {
+    digitalWrite(releuPin, HIGH); // Asigură-te că e oprit în mod normal
     moveForward();
   }
+
+  delay(300);
 }
 
-int readSensor_L() {
-  delay(70);
-  int cm_L = sonar_L.ping_cm();
-  if (cm_L == 0) {
-    cm_L = 250;
-  }
-  return cm_L;
+int readDistance1() {
+  digitalWrite(trigPin1, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin1, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin1, LOW);
+
+  duration1 = pulseIn(echoPin1, HIGH);
+  int dist_cm = duration1 * 0.034 / 2;
+  if (dist_cm == 0) return 250;
+  return dist_cm;
 }
 
-int readSensor_M() {
-  delay(70);
-  int cm_M = sonar_M.ping_cm();
-  if (cm_M == 0) {
-    cm_M = 250;
-  }
-  return cm_M;
+int readDistance2() {
+  digitalWrite(trigPin2, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin2, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin2, LOW);
+
+  duration2 = pulseIn(echoPin2, HIGH);
+  int dist_cm = duration2 * 0.034 / 2;
+  if (dist_cm == 0) return 250;
+  return dist_cm;
 }
 
-int readSensor_R() {
-  delay(70);
-  int cm_R = sonar_R.ping_cm();
-  if (cm_R == 0) {
-    cm_R = 250;
-  }
-  return cm_R;
-}
-
+// Funcții motoare
 void moveForward() {
-  digitalWrite(L1, LOW); 
-  analogWrite(L2, motor_speed);
-  analogWrite(R1, motor_speed);
-  digitalWrite(R2, LOW);
+  analogWrite(ENA, motor_speed);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  analogWrite(ENB, motor_speed);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
 }
+
 
 void moveBackward() {
-  analogWrite(L1, motor_speed); 
-  digitalWrite(L2, LOW);
-  digitalWrite(R1, LOW);
-  analogWrite(R2, motor_speed);
+  analogWrite(ENA, motor_speed);
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  analogWrite(ENB, motor_speed);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
 }
 
-void moveLeft() {
-  analogWrite(L1, motor_speed); 
-  digitalWrite(L2, LOW);
-  analogWrite(R1, motor_speed);
-  digitalWrite(R2, LOW);
-}
 
-void moveRight() {
-  digitalWrite(L1, LOW); 
-  analogWrite(L2, motor_speed);
-  digitalWrite(R1, LOW);
-  analogWrite(R2, motor_speed);
-}
-
-void moveStop() {
-  digitalWrite(L1, LOW); 
-  digitalWrite(L2, LOW);
-  digitalWrite(R1, LOW);
-  digitalWrite(R2, LOW);
+void stopMotors() {
+  analogWrite(ENA, 0);
+  analogWrite(ENB, 0);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
 }
