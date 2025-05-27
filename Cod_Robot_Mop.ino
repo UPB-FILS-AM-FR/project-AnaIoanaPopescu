@@ -7,7 +7,7 @@
 // Senzor lateral
 #define trigPin2 3
 #define echoPin2 2
-#define releuPin 7  // Sau alt pin digital liber
+#define releuPin 7  
 
 
 // Motoare (prin L293N)
@@ -70,7 +70,7 @@ void loop() {
     stopMotors();
     digitalWrite(releuPin, HIGH); // Releu oprit
   } else {
-    digitalWrite(releuPin, HIGH); // Asigură-te că e oprit în mod normal
+    digitalWrite(releuPin, HIGH);
     moveForward();
   }
 
