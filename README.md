@@ -103,11 +103,34 @@ J’ai utilisé l’IDE Arduino et je l’ai initialisé pour un bon fonctionnem
 
 | **Semaine** | **Période**     | **Résumé**                                                                                     |
 |-------------|-----------------|------------------------------------------------------------------------------------------------|
-| Semaine 6   | 6 - 12 mai       | Configuration initiale du robot et du matériel.                                                |
-| Semaine 7   | 13 - 19 mai      | Développement de la logique en mode automatique basée sur les capteurs à ultrasons.           |
+| Semaine 6   | 6 - 12 mai       | Configuration initiale du robot et du matériel. J'ai cole les jumpers sur la plaque PCB.                                                |
+| Semaine 7   | 13 - 19 mai      | Développement de la logique en mode automatique basée sur les capteurs à ultrasons. J'ai fini la configuration de la pompe et du driver du moteur.           |
 | Semaine 8   | 20 - 26 mai      | Ajustement du contrôle des moteurs et de la détection d’obstacles. Tests finaux réalisés.     |
 
 ---
+
+## Suivi du temps de travail
+
+Ce tableau présente la répartition des heures de travail estimées pour la réalisation complète du projet de robot de nettoyage autonome.
+
+| Tâches réalisées                                                                 | Durée en heures |
+|---------------------------------------------------------------------------------------|-----------------------------|
+| Recherche sur Internet et YouTube pour trouver des idées, comprendre le fonctionnement général du robot                                                                 | 3 h                         |
+| Étude du principe de fonctionnement avant de chercher les composants sur plusieurs sites (ArduShop, Sigmanortec, Optimus Digital)                                       | 2 h                         |
+| Recherche des composants, planification de l’architecture générale                                                                                                      | 3 h                         |
+| Tests de compatibilité entre la pompe, le relais et l’alimentation                                                                                                      | 3 h                         |
+| Montage initial du châssis, fixation des moteurs, roues, des jumpers et des batteries. Aussi la schema pour la branule et le reservoir d'eau.                           | 4 h                         |
+| Connexion des moteurs au driver L293N, tests de direction                                                                                                               | 4 h                         |
+| Installation des capteurs HC-SR04, tests de distance avec la librairie NewPing en Arduino IDE au debut, et apres en VS Code                                             | 4 h                         |
+| Programmation du mode automatique de détection d’obstacles                                                                                                              | 5 h                         |
+| Intégration de la pompe, relais et contrôle par Arduino                                                                                                                 | 4 h                         |
+| Ajustements du code pour mouvement fluide et évitement intelligent                                                                                                      | 5 h                         |
+| Conception du schéma électrique, documentation et la diagramme des composantes principales.                                                                             | 3 h                         |
+| Assemblage final du prototype, tests en conditions réelles. J'ai mis la serpillière pour tester le pouvoir du robot.                                                    | 5 h                         |
+| Prises de photos et création de la documentation finale sur GitHub                                                                                                      | 3 h                         |
+
+Total d’heures travaillées : 48 heures.
+
 
 ## Aperçu du Code
 
